@@ -6,3 +6,4 @@
     image_url: "https://static.pexels.com/photos/235310/pexels-photo-235310.jpeg" 
     )
 end
+
