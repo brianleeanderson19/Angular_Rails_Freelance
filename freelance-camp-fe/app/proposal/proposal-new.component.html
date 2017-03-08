@@ -139,6 +139,14 @@
             Generate Proposal
           </button>
 
+          <div
+            [hidden]="!submitted"
+            class="alert alert-success"
+            role="alert"
+          >
+            Your proposal has been generated! <a class="alert-link" router-link="/proposals">View all Proposals</a>
+          </div>
+
         </form>
       </div>
     </div>
