@@ -22,6 +22,10 @@ export class ProposalService {
     return this.http.get(this.proposalsUrl + "/" + id + '.json');
   }
 
+  createProposal(proposal) {
+    
+  }
+
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure
     let errMsg: string;
