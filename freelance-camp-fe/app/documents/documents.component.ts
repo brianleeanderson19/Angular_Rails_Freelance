@@ -4,7 +4,7 @@ import { Document } from './document';
 import { DocumentService } from './document.service';
 
 @Component({
-  moduleId: module.id;
+  moduleId: module.id,
   selector: 'documents',
   templateUrl: 'documents.component.html',
   styleUrls: ['documents.component.css'], 
@@ -17,7 +17,7 @@ export class DocumentsComponent implements OnInit {
   mode = "Observable";
 
   constructor(
-    private documentService: DocumentService;
+    private documentService: DocumentService
     ) {}
 
   ngOnInit() {
