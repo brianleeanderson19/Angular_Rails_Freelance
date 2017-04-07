@@ -7,7 +7,7 @@ import { DocumentService } from './document.service';
   moduleId: module.id,
   selector: 'documents',
   templateUrl: 'documents.component.html',
-  styleUrls: ['documents.component.css'], 
+  styleUrls: ['documents.component.css'],
   providers: [ DocumentService ]
 })
 export class DocumentsComponent implements OnInit {
@@ -18,7 +18,7 @@ export class DocumentsComponent implements OnInit {
 
   constructor(
     private documentService: DocumentService
-    ) {}
+  ) {}
 
   ngOnInit() {
     let timer = Observable.timer(0, 5000);

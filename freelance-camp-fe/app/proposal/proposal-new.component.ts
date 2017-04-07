@@ -15,8 +15,8 @@ export class ProposalNewComponent {
   submitted: boolean = false;
 
   constructor(
-      private proposalService: ProposalService
-    ) {}
+    private proposalService: ProposalService
+  ) {}
 
   createProposal(proposal) {
     this.submitted = true;
@@ -27,7 +27,6 @@ export class ProposalNewComponent {
             console.log("Error saving proposal");
             return Observable.throw(error);
           }
-        ); 
-          
+        );
   }
 }

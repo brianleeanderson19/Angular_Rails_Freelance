@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-var Rx_1 = require("rxjs/Rx");
 var ProposalService = (function () {
     function ProposalService(http) {
         this.http = http;
@@ -24,27 +23,6 @@ var ProposalService = (function () {
     };
     ProposalService.prototype.getProposal = function (id) {
         return this.http.get(this.proposalsUrl + "/" + id + '.json');
-    };
-    ProposalService.prototype.createProposal = function (proposal) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.post(this.proposalsUrl, JSON.stringify(proposal), {
-            headers: headers
-        }).map(function (res) { return res.json(); });
-    };
-    ProposalService.prototype.handleError = function (error) {
-        // In a real world app, we might use a remote logging infrastructure
-        var errMsg;
-        if (error instanceof http_1.Response) {
-            var body = error.json() || '';
-            var err = body.error || JSON.stringify(body);
-            errMsg = error.status + " - " + (error.statusText || '') + " " + err;
-        }
-        else {
-            errMsg = error.message ? error.message : error.toString();
-        }
-        console.error(errMsg);
-        return Rx_1.Observable.throw(errMsg);
     };
     return ProposalService;
 }());

@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
@@ -13,13 +14,13 @@ import { ProposalService } from './proposal.service';
 })
 export class ProposalListComponent implements OnInit {
   proposals: Proposal[];
-  errorMessage: string; 
+  errorMessage: string;
   mode = "Observable";
 
   constructor(
     private proposalService: ProposalService,
     private router: Router
-    ) {}
+  ) {}
 
   ngOnInit() {
     let timer = Observable.timer(0, 5000);

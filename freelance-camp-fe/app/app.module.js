@@ -52,4 +52,36 @@ AppModule = __decorate([
     })
 ], AppModule);
 exports.AppModule = AppModule;
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            platform_browser_1.BrowserModule,
+            app_routing_module_1.AppRoutingModule,
+            forms_1.FormsModule,
+            ng_bootstrap_1.NgbModule.forRoot(),
+            http_1.HttpModule
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            homepage_component_1.HomepageComponent,
+            documents_component_1.DocumentsComponent,
+            proposal_list_component_1.ProposalListComponent,
+            proposal_new_component_1.ProposalNewComponent,
+            proposal_show_component_1.ProposalShowComponent
+        ],
+        providers: [
+            document_service_1.DocumentService,
+            proposal_service_1.ProposalService
+        ],
+        bootstrap: [
+            app_component_1.AppComponent
+        ]
+    })
+], AppModule);
+exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map
